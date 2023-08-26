@@ -27,14 +27,15 @@ resource "aws_instance" "appserver" {
   tags = {
     Name = "appserver"
   }
+
   connection {
     type        = "ssh"
     user        = "ubuntu"
     private_key = file(var.private_key_path)
     host        = aws_instance.appserver.public_ip
   }
-}
 
+}
 resource "null_resource" "script" {
   provisioner "file" {
     source      = "nop-playbook.yaml"
