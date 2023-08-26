@@ -1,5 +1,5 @@
 resource "aws_key_pair" "idrsa" {
-  key_name   = "workshop"
+  key_name   = "byere"
   public_key = file(var.public_key_path)
   tags = {
     CreatedBy = "terraform"
