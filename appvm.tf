@@ -23,6 +23,7 @@ resource "aws_instance" "appserver" {
   key_name                    = aws_key_pair.idrsa.key_name
   vpc_security_group_ids      = [aws_security_group.app.id]
   subnet_id                   = data.aws_subnet.app.id
+  // user_data                   = file(var.ansiblescript)
   tags = {
     Name = "appserver"
   }

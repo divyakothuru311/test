@@ -34,7 +34,11 @@ variable "ubuntu_ami_id" {
   type        = string
   description = "this is ami id of vm"
 }
+# variable "ansiblescript" {
+#   type        = string
+#   description = "this is ansible script"
 
+# }
 variable "app_ec2_size" {
   type        = string
   description = "this is size of vm"
