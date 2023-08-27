@@ -15,10 +15,11 @@ pipeline {
         }
         stage('create vm via terraform') {
             steps {
+                sh 'printenv'
                 sh 'terraform init'
                 sh 'terraform validate'
                 sh 'terraform apply -var-file="dev.tfvars" -auto-approve'
-                 //  sh 'terraform destroy -var-file="dev.tfvars" -auto-approve'
+                //  sh 'terraform destroy -var-file="dev.tfvars" -auto-approve'
              }
         }
     }
